@@ -1,0 +1,91 @@
+/* إعدادات أساسية */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* مناطق الشاشات */
+#lobby, #gameScreen, #leaderboardScreen {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* أزرار عامة */
+.role-button, #startRoundBtn, #submitAnswersBtn, #nextRoundBtn {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 2px solid #333;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.role-button:hover, #startRoundBtn:hover, #submitAnswersBtn:hover, #nextRoundBtn:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* عرض الحرف */
+#letterDisplay {
+    font-size: 80px;
+    margin: 20px;
+    animation: float 1s infinite alternate ease-in-out;
+}
+
+/* صناديق الإجابة */
+.answer-box {
+    width: 250px;
+    padding: 12px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: #1e1e1e;
+    color: white;
+    outline: none;
+}
+
+/* تايمر */
+#timer {
+    font-size: 48px;
+    margin: 20px;
+}
+
+/* أنيميشن الحرف */
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-10px); }
+}
+
+/* ليدر بورد */
+#leaderboard {
+    margin-top: 30px;
+}
+
+.player-score {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* دعم اللايت مود */
+.light-mode {
+    background-color: #f0f0f0;
+    color: #121212;
+}
+
+.light-mode .role-button, .light-mode #startRoundBtn, .light-mode #submitAnswersBtn, .light-mode #nextRoundBtn {
+    background-color: #ffffff;
+    color: #121212;
+    border: 2px solid #ccc;
+}
